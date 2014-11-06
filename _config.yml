@@ -1,5 +1,6 @@
 exclude:
   - README.md
+  - import-docs.py
 defaults:
   - scope:
       path: ''
