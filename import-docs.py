@@ -7,14 +7,19 @@ parser = argparse.ArgumentParser()
 parser.add_argument('srweb', help='Path to an installation of srweb')
 args = parser.parse_args()
 
-docs_root = Path('docs')
-srweb_root = Path(args.srweb) / 'content' / 'en' / 'docs'
+site_root = Path('.')
+srweb_root = Path(args.srweb) / 'content' / 'en'
+
+protected = {site_root / 'README.md',
+             site_root / '_layouts' / 'default.html'}
 
 # Clear out existing content
-for previous_file in docs_root.glob('**/*.md'):
-    previous_file.unlink()
-for previous_file in docs_root.glob('**/*.html'):
-    previous_file.unlink()
+for previous_file in site_root.glob('**/*.md'):
+    if previous_file not in protected:
+        previous_file.unlink()
+for previous_file in site_root.glob('**/*.html'):
+    if previous_file not in protected:
+        previous_file.unlink()
 
 MD_REGEX = re.compile('^//([A-Z_]+)\s*:\s*(.*)\s*$')
 PRE_START_REGEX = re.compile('^<pre><code class="override-lang ([a-z0-9_-]+)">(.*)')
@@ -64,14 +69,18 @@ def convert_document(source, destination):
             if match.group(2):
                 metadata[match.group(1)] = match.group(2)
         if 'REDIRECT' in metadata:
-            redirects[source.relative_to(docs_root)] = (301, metadata['REDIRECT'])
+            redirects[destination.relative_to(site_root)] = (301, metadata['REDIRECT'])
             return
         content_type = metadata.get('CONTENT_TYPE', 'markdown')
         yaml_data = {'layout': 'default'}
         yaml_data['title'] = metadata.get('TITLE', 'Documentation')
         if 'DESCRIPTION' in metadata:
             yaml_data['description'] = metadata['DESCRIPTION']
-        transliterator, extension = FORMATS[content_type]
+        try:
+            transliterator, extension = FORMATS[content_type]
+        except KeyError:
+            print('DANGER: could not convert content type {}'.format(content_type))
+            return
         with destination.with_suffix(extension).open('w') as dest_f:
             dest_f.write('---\n')
             yaml.dump(yaml_data, dest_f, default_flow_style=False)
@@ -83,10 +92,10 @@ for doc_page in srweb_root.glob('**/*'):
         continue
     if doc_page.name.startswith('.'):
         continue
-    target_path = (docs_root / doc_page.relative_to(srweb_root))
+    target_path = (site_root / doc_page.relative_to(srweb_root))
     convert_document(doc_page, target_path)
 
-redirects_path = docs_root / 'redirects.yaml'
+redirects_path = site_root / 'redirects.yaml'
 
 # emit redirects
 with redirects_path.open('w') as f:
