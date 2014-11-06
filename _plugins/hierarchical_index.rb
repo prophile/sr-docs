@@ -5,6 +5,11 @@ module Jekyll
       @pages = pages
     end
 
+    def common_prefix(a, b)
+      prefixed_pairs = a.zip(b).take_while { |pair| pair[0] == pair[1] }
+      prefixed_pairs.map { |a, b| a }
+    end
+
     def render(context)
       pages = context[@pages]
       result = ""
@@ -15,9 +20,7 @@ module Jekyll
         url = page.url
         # Calculate opening and closing of lists by length of common prefix
         section = url_elements[0...-1]
-        common = section.zip(previous_section).take_while { |pair|
-            pair[0] == pair[1]
-        }
+        common = common_prefix(section, previous_section)
         # Close previous sections
         result += "</ul>"*(previous_section.length - common.length)
         # Open new sections
