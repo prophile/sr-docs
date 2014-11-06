@@ -1,8 +1,8 @@
 ---
-title: User Accounts
 description: Information about the user accounts given to competitors.
+layout: default
+title: User Accounts
 ---
-
 # User Accounts
 
 Your User Account can be used to access the various online services that we host.
