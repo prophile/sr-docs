@@ -46,6 +46,8 @@ FORMATS = {'markdown': (transliterate_markdown, '.md'),
            'html': (transliterate_html, '.html'),
            'md': (transliterate_markdown, '.md')}
 
+redirects = {}
+
 def convert_document(source, destination):
     try:
         destination.parent.mkdir(parents=True)
@@ -61,6 +63,9 @@ def convert_document(source, destination):
                 break
             if match.group(2):
                 metadata[match.group(1)] = match.group(2)
+        if 'REDIRECT' in metadata:
+            redirects[source.relative_to(docs_root)] = (301, metadata['REDIRECT'])
+            return
         content_type = metadata.get('CONTENT_TYPE', 'markdown')
         yaml_data = {'layout': 'default'}
         yaml_data['title'] = metadata.get('TITLE', 'Documentation')
@@ -80,4 +85,10 @@ for doc_page in srweb_root.glob('**/*'):
         continue
     target_path = (docs_root / doc_page.relative_to(srweb_root))
     convert_document(doc_page, target_path)
+
+redirects_path = docs_root / 'redirects.yaml'
+
+# emit redirects
+with redirects_path.open('w') as f:
+    yaml.dump(redirects, f)
 
