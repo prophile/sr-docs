@@ -1,0 +1,74 @@
+/* General */
+
+div.docs h2 {
+	clear: both;
+}
+
+/* docs/kit/batteries */
+
+@font-face {
+	font-family: "Register";
+	src: url("../fonts/register.ttf");
+}
+
+table.charger_lcd {
+	font-family: "Register";
+	font-size: 24pt;
+	line-height: 0.8em;
+	background-color: #007dc2;
+	color: white;
+	width: 298pt;
+	text-align: center;
+	border-style: solid;
+	border-width: 16pt 10pt;
+	border-color: #007dc2;
+	text-align: left;
+}
+table.charger_lcd td {
+	border-color: #007dc2;
+}
+
+@media print {
+	table.charger_lcd {
+		font-family: monospace;
+	}
+}
+
+/* docs/troubleshooting/interactive_troubleshooter */
+#docs_troubleshooting_interactive_troubleshooter #resetbtnattop {
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+#docs_troubleshooting_interactive_troubleshooter #troubleshooter_network_error {
+	display: none;
+}
+
+#docs_troubleshooting_interactive_troubleshooter p.message {
+	font-style: italic !important;
+	margin-left: 40px !important;
+}
+
+#docs_troubleshooting_interactive_troubleshooter img {
+	margin-top: 10px;
+}
+
+#docs_troubleshooting_interactive_troubleshooter .question {
+	padding: 10px;
+	margin-bottom: 2px;
+}
+
+#docs_troubleshooting_interactive_troubleshooter .question label {
+	padding: 4px 8px;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+#docs_troubleshooting_interactive_troubleshooter .question label > * {
+	vertical-align: middle !important;
+}
+
+#docs_troubleshooting_interactive_troubleshooter .question label > input[type=radio] {
+	margin-right: 10px;
+}
