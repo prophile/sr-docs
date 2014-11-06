@@ -7,4 +7,5 @@ defaults:
     values:
       layout: default
 permalink: pretty
+markdown: kramdown
 

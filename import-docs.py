@@ -15,12 +15,34 @@ for previous_file in docs_root.glob('**/*.md'):
     previous_file.unlink()
 
 MD_REGEX = re.compile('^//([A-Z_]+)\s*:\s*(.*)\s*$')
+PRE_START_REGEX = re.compile('^<pre><code class="override-lang ([a-z0-9_-]+)">(.*)')
+
+def transliterate_markdown(source_f, dest_f):
+    in_code_block = False
+    for line in source_f:
+        if line.startswith('~~~'):
+            in_code_block = not in_code_block
+            if in_code_block:
+                dest_f.write('{% highlight python %}\n')
+            else:
+                dest_f.write('{% endhighlight %}\n')
+        elif line.startswith('</code></pre>'):
+            dest_f.write('{% endhighlight %}\n')
+        else:
+            ps = PRE_START_REGEX.match(line)
+            if ps is not None:
+                dest_f.write('{{% highlight {} %}}\n'.format(ps.group(1)))
+                dest_f.write(ps.group(2))
+                dest_f.write('\n')
+            else:
+                dest_f.write(line)
 
 def convert_document(source, destination):
     try:
         destination.parent.mkdir(parents=True)
     except FileExistsError:
         pass
+    print('Converting', source, '->', destination)
     with source.open('r') as source_f, destination.open('w') as dest_f:
         metadata = {}
         while True:
@@ -40,8 +62,7 @@ def convert_document(source, destination):
         dest_f.write('---\n')
         yaml.dump(yaml_data, dest_f, default_flow_style=False)
         dest_f.write('---\n')
-        data = source_f.read()
-        dest_f.write(data)
+        transliterate_markdown(source_f, dest_f)
 
 for doc_page in srweb_root.glob('**/*'):
     if doc_page.is_dir():
