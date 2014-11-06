@@ -1,0 +1,22 @@
+---
+description: A Southampton tech day on the 9th of February 2013
+layout: default
+title: 2013/02/09 -- Southampton Tech Day 2
+---
+2013/02/09: Southampton Tech Day 2
+==================================
+
+What: A [tech day](/events/tech_days).
+
+When: 9<sup>th</sup> February 2013, 9am - 4:30pm
+
+Where: [Building 25](http://data.southampton.ac.uk/building/25.html) on the University of Southampton's Highfield Campus.
+  (Also see [this campus map](http://www.southampton.ac.uk/visitus/campuses/maps/highfield_3d_key.pdf).)
+
+Who: All Student Robotics teams are welcome to attend.
+  Please [inform](/about/contactus) us if your team is coming.
+
+Food: The [SUSU Café](http://www.susu.org/cafe/) is nearby, and is open from 11am until 3pm.
+  There is also a small Co-op and Sainsburys store nearby along Burgess road.
+
+Kit: Computers will be available for use in Building 25, however you're welcome to bring your own laptops if you prefer.

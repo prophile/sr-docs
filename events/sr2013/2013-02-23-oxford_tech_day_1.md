@@ -1,0 +1,27 @@
+---
+description: A tech day near Oxford on the 23rd of February 2013
+layout: default
+title: 2013/02/23 -- Oxford Tech Day 1
+---
+2013/02/23: Oxford Tech Day 1
+==============================
+
+What: A [tech day](/events/tech_days), done a little differently. As it's at
+the home to the JET and MAST Nuclear Fusion experiments, you'll get a tour of
+site and possibly a demonstration by CCFE's Remote Handling team.
+
+When: 23<sup>rd</sup> February 2013, 9.30am - 4.30pm
+
+Where: [Culham Centre for Fusion Energy](http://www.ccfe.ac.uk/index.aspx).
+  ([Directions](http://www.ccfe.ac.uk/Location.aspx).)
+
+Who: All Student Robotics teams are welcome to attend.
+  You need to [inform us](/about/contactus) if your team is coming by 11th
+February, as we need to arrange temporary site passes and make a plan for the
+day.
+
+Food: Lunch will be provided.
+
+Kit: We can't provide any kit for this event - please bring laptops, any tools
+  you intend to use, etc.
+  WiFi will be available.

@@ -1,0 +1,48 @@
+---
+layout: default
+title: Key Dates
+---
+Key Dates for SR2015
+====================
+
+Kickstart
+---------
+
+[Kickstart](/events/kickstart) is when you will learn about the game, and recieve your kit.
+
+For SR2015 the dates are as below. We expect to confirm the particulars of each
+event at the start of the academic year.
+
+### Southampton
+
+ - [25th October, University of Southampton](/events/sr2015/2014-10-25-soton_kickstart)
+
+### Bristol
+
+ - [25th October, University of Bristol](/events/sr2015/2014-10-25-bristol_kickstart)
+
+### London
+
+ - [25th October, Facebook HQ](/events/sr2015/2014-10-25-london_kickstart)
+
+Tech Days
+---------
+
+[Tech Days](/events/tech_days) take place throughout the year to help you along with the design and development of your robot.
+
+### Southampton
+
+ - [6th December, University of Southampton](/events/sr2015/2014-12-06-soton_tech_day_1)
+
+### Bristol
+
+TBC
+
+### Other Venues
+
+TBC
+
+Competition
+-----------
+
+The competition date (and location) for SR2015 is TBC.

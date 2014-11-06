@@ -1,0 +1,45 @@
+---
+description: The Southampton KickStart on the 12th of October 2013
+layout: default
+title: 'October 12th 2013: KickStart 2014'
+---
+October 12th 2013: KickStart 2014
+=================================
+
+What: [KickStart](/events/kickstart).
+
+When: 12<sup>th</sup> October 2013.
+
+Where: [Building 32](http://data.southampton.ac.uk/building/32.html) on the University of Southampton's Highfield Campus.
+  (Also see [this campus map](http://www.southampton.ac.uk/visitus/campuses/maps/highfield_3d_key.pdf).)
+
+Who: Student Robotics teams.
+
+Food: There is a small Co-op and Sainsburys store nearby along Burgess road.
+
+Parking: Parking is available north of [Building 32](http://data.southampton.ac.uk/building/32.html)
+   and next to [Building 67](http://data.southampton.ac.uk/building/67.html).
+
+Schedule
+--------
+
+ * **09:45** - Arrival
+ * **10:00** - Welcome talk
+ * **10:10** - Introduction to the kit and game
+ * **10:40** - Tea break
+ * **11:00** - Kit introductory tasks - morning session
+ * **13:00** - Lunch
+ * **14:00** - Kit introductory tasks - afternoon session
+ * **17:00** - Finished
+
+### Kit Delivery
+
+We expect that the majority of teams will be able to collect their kits
+at KickStart. Alternatively, you can arrange for it to be collected by
+courier during the week following. Couriered kits should be insured for
+£500, please [contact us](mailto:info@studentrobotics.org) for collection
+details.
+
+If you think that you will have difficulty doing this (e.g: overseas teams),
+then please let us know in advance. We are able to assist a limited number
+of teams with shipping if you are unable to collect them at KickStart.

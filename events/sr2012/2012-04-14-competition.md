@@ -1,0 +1,48 @@
+---
+description: A Southampton tech day on the 17th of March 2012
+layout: default
+title: 'April 14th-15th: Competition 2012'
+---
+April 14th-15th: Competition 2012
+=================================
+
+What: The [competition](/schools/game).
+
+When: 14<sup>th</sup> and 15<sup>th</sup> April 2012.  Doors open 9:30am.
+
+Where: [Building 40](http://data.southampton.ac.uk/building/40.html) on the University of Southampton's Highfield Campus.
+  (Also see [this campus map](http://www.southampton.ac.uk/visitus/campuses/maps/highfield_3d_key.pdf).)
+
+Who: All Student Robotics teams.  (Note that this year, both days of the competition feature matches.)
+
+Food: There is a small Co-op and Sainsburys store nearby along Burgess road.
+
+Parking: Parking is available north of [Building 32](http://data.southampton.ac.uk/building/32.html) and next to [Building 67](http://data.southampton.ac.uk/building/67.html)
+
+Schedule
+--------
+
+### 14/04/2012: Day 1
+
+ * **09:30** - Doors open
+ * **10:00** - Safety briefing
+ * **10:05** - Tinkering time
+ * **12:45** - Lunch
+ * **13:30** - Introduction to proceedings
+ * **13:45** - First robot inspections
+ * **14:00** - League matches
+ * **17:00** - End of matches
+ * **18:00** - Doors close
+
+### 15/04/2012: Day 2
+
+ * **09:30** - Doors open
+ * **10:00** - Safety Talk
+ * **10:05** - League Matches
+ * **12:15** - Group photo
+ * **12:30** - Lunch
+ * **13:15** - League Matches
+ * **15:00** - Finals (knock-outs)
+ * **16:00** - Prize giving ceremony
+ * **16:30** - Kit return
+ * **17:00** - Doors close
