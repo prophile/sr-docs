@@ -14,6 +14,7 @@ module Jekyll
       pages = context[@pages]
       result = ""
       previous_section = []
+      all_urls = pages.map { |page| page.url }
       pages.each do |page|
         url_elements = page.url.split('/').select { |x| x.length > 0 }
         title = url_elements[-1].gsub('_', ' ')
@@ -25,8 +26,17 @@ module Jekyll
         result += "</ul>"*(previous_section.length - common.length)
         # Open new sections
         result += "<ul>"*(section.length - common.length)
+        is_opener = all_urls.any? { |page_url|
+          page_url != url and page_url.start_with?(url)
+        }
         result += "<li>"
+        if is_opener then
+          result += "<strong>"
+        end
         result += "<a href=\"#{url}\">#{title}</a>\n"
+        if is_opener then
+          result += "</strong>"
+        end
         result += "</li>\n"
         previous_section = section
       end
